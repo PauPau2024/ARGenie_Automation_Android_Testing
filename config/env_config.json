@@ -1,0 +1,6 @@
+{
+    "base_url": "http://localhost:4723/wd/hub",
+    "browserstack_user": "sujalmachhale_WcOj4g",
+    "browserstack_key": "XRqfC83Pvqy6MwXqv69H",
+    "app_url": "bs://e0d9e2e3629faebff09cc4c1bf4466c7fc9be962"
+}

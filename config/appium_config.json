@@ -1,0 +1,9 @@
+{
+    "platformName": "Android",
+    "appium:automationName": "UIAutomator2",
+    "appium:ensureWebviewsHavePages": true,
+    "appium:nativeWebScreenshot": true,
+    "appium:newCommandTimeout": 3600,
+    "appium:connectHardwareKeyboard": true,
+    "appium:autoGrantPermissions": true
+}
