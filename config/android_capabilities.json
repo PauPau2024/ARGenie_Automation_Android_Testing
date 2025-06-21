@@ -8,5 +8,4 @@
     "appium:connectHardwareKeyboard": true,
     "appium:autoGrantPermissions": true,
     "appium:app": "D:/Device_Farm/Stagging Application/Remote Assist-stagingV4.0.4.apk"
-
 }

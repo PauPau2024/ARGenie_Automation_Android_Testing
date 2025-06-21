@@ -1,6 +1,7 @@
 from drivers.driver_utils import element_clicked_by_uiautomator,element_presence_by_id,element_clicked_by_xpath,element_clicked_by_id,element_presence_by_uiautomator,element_presence_by_xpath
 from utils.presence_of_elements import check_ui_elements
 from utils.login import login
+import time
 
 def  test_clicking_login_button_under_session_section(driver):
     assert element_clicked_by_uiautomator(driver, "new UiSelector().resourceId(\"com.supportgenie.argenie:id/navigation_bar_item_icon_container\").instance(1)" ), "Failed to Click the Session Button"
@@ -63,11 +64,14 @@ def test_wrong_email_wrong_password(driver):
     assert login(driver, "test@test.com", "password"), "Failed to Login with Wrong Email and Wrong Password"
 
 def test_correct_email_wrong_password(driver):    
-    assert login(driver, "sujal@staging", "password"), "Failed to Login with Correct Email and Wrong Password"
+    assert login(driver, "sujal@staging.com", "password"), "Failed to Login with Correct Email and Wrong Password"
 
 def test_wrong_email_correct_password(driver):    
     assert login(driver, "test@test.com", "Kingfisher@123"), "Failed to Login with Wrong Email and Correct Password"
-    assert element_clicked_by_uiautomator(driver, "new UiSelector().text(\"Go Back\")"), "Failed to click the 'Go Back' Button in the Login Page"
      
-
+def test_correct_email_correct_password(driver):    
+    assert login(driver, "sujal@staging.com", "Kingfisher@123"), "Failed to Login with Wrong Email and Correct Password"
+    time.sleep(5)
+    assert element_clicked_by_uiautomator(driver, "new UiSelector().text(\"Go Back\")"), "Failed to click the 'Go Back' Button in the Login Page"
+ 
      

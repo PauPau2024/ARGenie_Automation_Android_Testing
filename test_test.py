@@ -846,6 +846,7 @@ def test_LOG_OUT():
         print("User Profle Section Layout is Present")
         wait.until(EC.element_to_be_clickable((AppiumBy.XPATH, '//android.widget.RelativeLayout[@resource-id="com.supportgenie.argenie:id/complete_profile_rly"]'))).click()
         print("User Profle Section Layout Clicked Successfully")
+        
         popup = wait.until(EC.presence_of_element_located((AppiumBy.XPATH, '//android.widget.TextView[@resource-id="com.supportgenie.argenie:id/dialogTitle"]')))
         print(f"Log Out POP-UP : {popup.text}")
         yes = wait.until(EC.presence_of_element_located((AppiumBy.XPATH, '//android.widget.Button[@resource-id="com.supportgenie.argenie:id/positiveButton"]')))
