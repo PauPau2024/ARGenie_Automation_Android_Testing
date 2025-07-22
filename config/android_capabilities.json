@@ -1,11 +1,10 @@
 {
     "platformName": "Android",
-    "appium:deviceName": "emulator-5554",
     "appium:automationName": "UIAutomator2",
     "appium:ensureWebviewsHavePages": true,
     "appium:nativeWebScreenshot": true,
     "appium:newCommandTimeout": 3600,
     "appium:connectHardwareKeyboard": true,
     "appium:autoGrantPermissions": true,
-    "appium:app": "D:/Device_Farm/Stagging Application/Remote Assist-stagingV4.0.4.apk"
+    "appium:app": "C:/Users/HP/Downloads/updated_ar.apk"
 }

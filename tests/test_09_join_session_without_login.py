@@ -30,10 +30,12 @@ def test_dynamic_ui_elements_of_meeting(driver):
      assert element_presence_by_id(driver,"com.supportgenie.argenie:id/chat_lly"), "Failed to find the 'Chat' Button"                
 
 def test_turn_on_the_mic(driver):
-     assert element_clicked_by_id(driver,"com.supportgenie.argenie:id/mic_iv"), "Failed to Click the 'Mic' Button"     
+     assert element_presence_by_uiautomator(driver,"new UiSelector().resourceId(\"com.supportgenie.argenie:id/mic_iv\").instance(1)"), "Failed to find the 'Mic' Button"     
+     assert element_clicked_by_uiautomator(driver,"new UiSelector().resourceId(\"com.supportgenie.argenie:id/mic_iv\").instance(1)"), "Failed to Click the 'Mic' Button"     
 
 def test_turn_on_the_video(driver):
-     assert element_clicked_by_id(driver,"com.supportgenie.argenie:id/video_iv"), "Failed to Click the 'Video' Button" 
+     assert element_presence_by_uiautomator(driver,"new UiSelector().resourceId(\"com.supportgenie.argenie:id/video_lly\").instance(1)"), "Failed to find the 'Video' Button" 
+     assert element_clicked_by_uiautomator(driver,"new UiSelector().resourceId(\"com.supportgenie.argenie:id/video_lly\").instance(1)"), "Failed to find the 'Video' Button" 
      time.sleep(10)
 
 def no_test_ar_annotation_before_login(driver):
